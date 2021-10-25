@@ -13,4 +13,16 @@ export class URLController {
         // Retornar a URL salva 
         res.json({ originURL, hash, shortURL });
     }
+    public async redirect(req: Request, res: Response): Promise<void>{
+        // Pega hash da URL
+        const { hash } = req.params;
+        // Encontrar a URL original pelo hash
+        const url = {
+            originURL: "https://www.kabum.com.br/produto/102002/headset-sem-fio-gamer-hyperx-cloud-flight-drivers-50mm-led-multiplas-plataformas-hx-hscf-bk-am",
+            hash: "R2Qak9oVx",
+            shortURL: "http://localhost:3333/R2Qak9oVx"
+        }
+        // Redirecionar para a URL original com o que encontramos no DB
+        res.redirect(url.originURL);
+    }
 }
