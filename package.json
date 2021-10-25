@@ -8,7 +8,7 @@
     "dev": "nodemon ./dist/index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
-    "start:prod": "set NODE_ENV=production && node dist/server"
+    "start:prod": "set NODE_ENV=production && node dist/index"
   },
   "author": "NGustavo011",
   "license": "ISC",
