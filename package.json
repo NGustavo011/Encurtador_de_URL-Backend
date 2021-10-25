@@ -6,7 +6,9 @@
   "scripts": {
     "build:watch": "tsc -w",
     "dev": "nodemon ./dist/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "start:prod": "set NODE_ENV=production && node dist/server"
   },
   "author": "NGustavo011",
   "license": "ISC",
