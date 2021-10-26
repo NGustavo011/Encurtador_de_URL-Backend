@@ -12,6 +12,6 @@ const urlController = new URLController();
 api.post("/shorten", urlController.shorten);
 api.get("/:hash", urlController.redirect);
 
-api.listen(3333, ()=>{
+api.listen(process.env.PORT || 3333, ()=>{
     console.log("Aplicação iniciada na porta 3333");
 })
